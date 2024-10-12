@@ -1,0 +1,72 @@
+@import 'fonts';
+
+.btn {
+	padding: 5px;
+	color: black;
+	border: 2px solid black;
+	transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.container {
+	opacity: 0;
+	background: white;
+	animation: fadeIn 1s 1s ease-in-out forwards;
+}
+
+.sectionTitle {
+	font-family: $font-header;
+	letter-spacing: 1px;
+	font-size: clamp(24px, 4vw, 48px);
+	text-align: center;
+	span {
+		padding-bottom: 2px;
+		border-bottom: 2px solid black;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.sectionTitle {
+		letter-spacing: 3px;
+	}
+	.btn {
+		padding: 12px;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.sectionTitle {
+		letter-spacing: 6px;
+	}
+	.btn {
+		&:hover {
+			background-color: black;
+			color: white;
+		}
+	}
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+}

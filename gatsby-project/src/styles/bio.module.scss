@@ -1,0 +1,32 @@
+.container {
+	width: 100%;
+	max-width: 1000px;
+	// margin: clamp(16px, 5vh, 48px) auto;
+	margin: 0 auto;
+	padding: 0 8px;
+}
+
+.btn {
+	width: 50%;
+	max-width: 150px;
+	font-style: normal;
+	font-weight: normal;
+    line-height: 1;
+    margin: 0 auto;
+    display: block;
+}
+
+.accordian {
+	overflow: hidden;
+	width: 95%;
+	max-width: 900px;
+	margin: 0 auto;
+	transition: max-height 0.8s ease;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+.text{
+    text-align: justify;
+    margin-top: 3vw;
+}

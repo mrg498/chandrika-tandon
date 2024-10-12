@@ -1,0 +1,110 @@
+.page {
+  font-weight: 500;
+  padding: 1rem;
+  padding-top: 7rem;
+  height: 100%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.h1 {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+  font-family: "cktFont", sans-serif;
+}
+
+.h2 {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+}
+
+.imageWrapper {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.image {
+  width: 100%;
+}
+
+.text {
+  padding-bottom: 1rem;
+
+  line-height: 1.7;
+  text-align: justify;
+  font-size: clamp(18px, 2vw, 22px);
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .page {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .section {
+    display: block;
+  }
+
+  .imageWrapper {
+    width: 50%;
+    float: left;
+    margin-right: 3rem;
+  }
+  .textWrapper {
+    padding-top: 1rem;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .h1 {
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+    font-weight: lighter;
+    font-family: "cktFont", sans-serif;
+  }
+
+  .h2 {
+    // font-size: 2rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: lighter;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .h1 {
+    font-size: 3rem;
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .h1 {
+    font-size: 3.5rem;
+    line-height: 5rem;
+  }
+
+  .h2 {
+    font-size: 1.7rem;
+    line-height: normal;
+  }
+}
