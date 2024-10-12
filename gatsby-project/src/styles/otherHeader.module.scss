@@ -1,0 +1,265 @@
+@import "fonts";
+@import "zIndex";
+
+.container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $z-header;
+	width: 100%;
+	background-color: transparent;
+	color: white;
+	font-family: $font-header;
+}
+.nav {
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	width: inherit;
+	justify-content: space-between;
+	align-items: center;
+    padding: 12px 16px;
+    opacity: 0;
+	animation: fadeIn 2s ease-in-out 2s forwards;
+	z-index: 1000;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	animation: fadeIn 2s ease-in-out forwards;
+}
+
+.logo {
+	display: flex;
+	flex-direction: column;
+	font-size: clamp(16px, 3vw, 40px);
+	letter-spacing: 2px;
+	margin: 4px 0;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+	opacity: 1.0;
+}
+
+// hamburger
+.hamburger {
+	z-index: $z-hamburger;
+	position: relative;
+	height: 44px;
+	width: 44px;
+	background-color: transparent;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.hamburger:before {
+	content: "";
+	position: absolute;
+	height: 44px;
+	width: 44px;
+	border: 5px solid transparent;
+	top: calc(50% - 23px);
+	left: calc(50% - 22px);
+	border-radius: 100%;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.hamburger.isActive:before {
+	border: 4px solid white;
+}
+.hamburger.isActive .hamburgerLine {
+	width: 30px;
+}
+
+.hamburgerLine {
+	width: 44px;
+	height: 4px;
+	background-color: white;
+	display: block;
+	margin: 8px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.isActive {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.hamburger.isActive .hamburgerLine:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger.isActive .hamburgerLine:nth-child(1) {
+	-webkit-transform: translateY(11px);
+	-ms-transform: translateY(11px);
+	-o-transform: translateY(11px);
+	transform: translateY(11px);
+}
+
+.hamburger.isActive .hamburgerLine:nth-child(3) {
+	-webkit-transform: translateY(-13px) rotate(90deg);
+	-ms-transform: translateY(-13px) rotate(90deg);
+	-o-transform: translateY(-13px) rotate(90deg);
+	transform: translateY(-13px) rotate(90deg);
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: rgba(0, 0, 0, 0.85);
+	opacity: 1.0;
+	animation-duration: 0.5s;
+	animation-name: modalAppear;
+}
+@keyframes modalAppear {
+	0% {
+		opacity: 0;
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		opacity: 1.0;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+}
+
+.navLinks{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+	min-height: 70vh;
+	margin-top: -35px;
+}
+
+.navLink{
+    font-family: $font-body;
+    font-size: clamp(32px, 5vw, 48px);
+    color: white;
+}
+
+.navLinkLink{
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.1s ease-in;
+    &:hover{
+        color: rgb(179, 179, 179);
+    }
+}
+
+.activeLink{
+    color: inherit;
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.nav {
+		padding: 16px 32px;
+	}
+	// hamburger
+	.hamburger {
+		position: relative;
+		height: 60px;
+		width: 60px;
+		background-color: transparent;
+		cursor: pointer;
+		-webkit-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+	.hamburger:before {
+		content: "";
+		position: absolute;
+		height: 60px;
+		width: 60px;
+		border: 5px solid transparent;
+		top: calc(50% - 30px);
+		left: calc(50% - 29px);
+		border-radius: 100%;
+		-webkit-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+	.hamburger.isActive:before {
+		border: 5px solid white;
+	}
+	.hamburger.isActive .hamburgerLine {
+		width: 40px;
+	}
+
+	.hamburgerLine {
+		width: 60px;
+		height: 5px;
+		display: block;
+		margin: 12px auto;
+		-webkit-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.isActive {
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.hamburger.isActive .hamburgerLine:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.isActive .hamburgerLine:nth-child(1) {
+		-webkit-transform: translateY(15px);
+		-ms-transform: translateY(15px);
+		-o-transform: translateY(15px);
+		transform: translateY(15px);
+	}
+
+	.hamburger.isActive .hamburgerLine:nth-child(3) {
+		-webkit-transform: translateY(-18px) rotate(90deg);
+		-ms-transform: translateY(-18px) rotate(90deg);
+		-o-transform: translateY(-18px) rotate(90deg);
+		transform: translateY(-18px) rotate(90deg);
+	}
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+}

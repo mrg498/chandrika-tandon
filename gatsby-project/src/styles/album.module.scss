@@ -1,0 +1,138 @@
+@import 'fonts';
+
+.rowWrapper {
+	width: 100%;
+	// height: 150px;
+	// background-color: red;
+	margin: clamp(32px, 6vw, 80px) auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	z-index: 100;
+}
+
+.colWrapper {
+	position: relative;
+	width: 150px;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	// background-color: blue;
+}
+
+.videoTitle {
+	font-size: clamp(16px, 3vw, 32px);
+	text-transform: uppercase;
+    font-family: $font-header;
+    margin-bottom: 0;
+}
+
+.subtitle {
+	font-size: clamp(14px, 2vw, 24px);
+	font-family: $font-body;
+	font-weight: bold;
+	margin: 0.5em 0;
+}
+
+
+.btn {
+	width: 70%;
+	max-width: 150px;
+}
+
+.btnsWrapper{
+	display: flex;
+	width: 100%;
+	position: absolute;
+	bottom: -25px;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.accordian {
+	width: 95%;
+	border: 2px solid transparent;
+	color: rgb(36, 36, 36);
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	.rowWrapper {
+		// height: 250px;
+	}
+	.colWrapper {
+		width: 250px;
+	}
+	.btnsWrapper{
+		bottom: -35px;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.rowWrapper {
+		// height: 300px;
+	}
+	.colWrapper {
+		width: 300px;
+	}
+	.videoTitle{
+		margin-bottom: 0;
+	}
+	.subtitle {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+	.albumDescription {
+		display: block;
+		line-height: 1.3;
+	}
+	.mobileDescription {
+		display: none;
+	}
+	.accordian {
+		width: 90%;
+	}
+	.btnsWrapper{
+		bottom: -45px;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.rowWrapper {
+		// height: 400px;
+	}
+	.colWrapper {
+		width: 400px;
+	}
+	.accordian {
+		width: 87%;
+	}
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	// .rowWrapper {
+	// 	height: 450px;
+	// }
+	// .colWrapper {
+	// 	width: 450px;
+	// }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+	// .rowWrapper {
+	// 	height: 500px;
+	// }
+	// .colWrapper {
+	// 	width: 500px;
+	// }
+}

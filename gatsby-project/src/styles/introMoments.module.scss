@@ -1,0 +1,53 @@
+// .container{
+//     padding-top: clamp(32px, 10vw, 135px);
+// }
+
+.image {
+  max-height: 50vh;
+}
+
+// .sectionTitle{
+//     padding-top: 5vh;
+// }
+
+.desktop {
+  display: none;
+}
+.mobile {
+  display: block;
+}
+
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  .image {
+  max-height: 40vh;
+}
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .image {
+  max-height: 55vh;
+}
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .image {
+  max-height: 65vh;
+}
+}

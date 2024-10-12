@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'cktFont';
+	src: url('../assets/font/font.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+$font-header : 'Libre Caslon Display', serif;
+$font-body : 'Montserrat', sans-serif;
