@@ -1,9 +1,0 @@
----
-updated_at: 2021-03-30T15:03:36.753Z
-title: The American Bazaar
-subtitle: "Chandrika Tandon: Ellis Island is 'symbolic beginning of the American Dream'"
-thumbnail_image: american-bazaar-thumbnail.jpg
-video_link: ""
-web_page_link: https://www.americanbazaaronline.com/2020/05/30/chandrika-tandon-ellis-island-is-symbolic-beginning-of-the-american-dream-441285/
-media_section: false
----
